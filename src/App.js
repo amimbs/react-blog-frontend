@@ -1,13 +1,14 @@
 
 import './App.css';
+import AllPosts from './pages/AllPosts';
 
 function App() {
 
-  let callBackend = (e) => {
-    fetch('http://localhost:3001/').then(res => res.json()).then(data => {
-      console.log(data)
-    })
-  }
+  // let callBackend = (e) => {
+  //   fetch('http://localhost:3001/').then(res => res.json()).then(data => {
+  //     console.log(data)
+  //   })
+  // }
   return (
     <div className="App">
       <header className="App-header">
@@ -25,12 +26,13 @@ function App() {
         </a>
       </header>
       <div>
-        <button onClick={callBackend}>
+        {/* <button onClick={callBackend}>
           call backend
-        </button>
+        </button> */}
+        <AllPosts />
       </div>
     </div>
   );
-}
+};
 
 export default App;
