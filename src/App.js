@@ -1,6 +1,9 @@
 
 import './App.css';
 import AllPosts from './pages/AllPosts';
+import { Link, Routes, Route } from "react-router-dom";
+import Post from './pages/Post';
+
 
 function App() {
 
@@ -29,7 +32,15 @@ function App() {
         {/* <button onClick={callBackend}>
           call backend
         </button> */}
-        <AllPosts />
+        <div>
+          <Link to='/'>Home</Link>
+          <Link to='/posts'>All Blogs</Link>
+        </div>
+        <Routes>
+          <Route path='posts' element={<AllPosts />} />
+          <Route path="/posts/:postId/" element={<Post />} />
+        </Routes>
+        
       </div>
     </div>
   );
